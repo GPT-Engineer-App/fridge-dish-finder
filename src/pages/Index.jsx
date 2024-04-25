@@ -9,12 +9,12 @@ const Index = () => {
   const handleSearch = () => {
     // Dummy data for demonstration purposes
     const dummyRecipes = [
-      { name: "Tomato Pasta", ingredients: ["Tomato", "Pasta", "Olive Oil"] },
-      { name: "Chicken Salad", ingredients: ["Chicken", "Lettuce", "Tomato", "Cucumber"] },
-      { name: "Omelette", ingredients: ["Egg", "Milk", "Cheese"] },
-      { name: "Beef Stew", ingredients: ["Beef", "Potato", "Carrot", "Onion"] },
-      { name: "Vegetable Curry", ingredients: ["Potato", "Carrot", "Peas", "Coconut Milk"] },
-      { name: "Fish Tacos", ingredients: ["Fish", "Tortillas", "Lime", "Cabbage"] },
+      { name: "Tomato Pasta", ingredients: ["Tomato", "Pasta", "Olive Oil"], description: "A simple yet delicious pasta dish using fresh tomatoes and olive oil." },
+      { name: "Chicken Salad", ingredients: ["Chicken", "Lettuce", "Tomato", "Cucumber"], description: "A refreshing salad with grilled chicken and fresh vegetables." },
+      { name: "Omelette", ingredients: ["Egg", "Milk", "Cheese"], description: "A fluffy omelette made with eggs, milk, and your choice of cheese." },
+      { name: "Beef Stew", ingredients: ["Beef", "Potato", "Carrot", "Onion"], description: "A hearty stew perfect for cold days, featuring tender beef and root vegetables." },
+      { name: "Vegetable Curry", ingredients: ["Potato", "Carrot", "Peas", "Coconut Milk"], description: "A rich and creamy curry made with vegetables and coconut milk." },
+      { name: "Fish Tacos", ingredients: ["Fish", "Tortillas", "Lime", "Cabbage"], description: "Crispy fish tacos with a tangy lime cabbage slaw." },
     ];
 
     // Filter recipes based on input ingredients
@@ -58,7 +58,7 @@ const Index = () => {
                     <Heading as="h3" size="md">
                       {recipe.name}
                     </Heading>
-                    <Text>
+                    <Text mb={2}>
                       Ingredients:{" "}
                       {recipe.recipeIngredients.map((item) => (
                         <span key={item.ingredient}>
@@ -67,6 +67,7 @@ const Index = () => {
                         </span>
                       ))}
                     </Text>
+                    <Text fontStyle="italic">{recipe.description}</Text>
                   </ListItem>
                 );
               })}
