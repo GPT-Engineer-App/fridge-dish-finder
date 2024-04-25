@@ -9,12 +9,12 @@ const Index = () => {
   const handleSearch = () => {
     // Dummy data for demonstration purposes
     const dummyRecipes = [
-      { name: "Tomato Pasta", ingredients: ["Tomato", "Pasta", "Olive Oil"], description: "A simple yet delicious pasta dish using fresh tomatoes and olive oil." },
-      { name: "Chicken Salad", ingredients: ["Chicken", "Lettuce", "Tomato", "Cucumber"], description: "A refreshing salad with grilled chicken and fresh vegetables." },
-      { name: "Omelette", ingredients: ["Egg", "Milk", "Cheese"], description: "A fluffy omelette made with eggs, milk, and your choice of cheese." },
-      { name: "Beef Stew", ingredients: ["Beef", "Potato", "Carrot", "Onion"], description: "A hearty stew perfect for cold days, featuring tender beef and root vegetables." },
-      { name: "Vegetable Curry", ingredients: ["Potato", "Carrot", "Peas", "Coconut Milk"], description: "A rich and creamy curry made with vegetables and coconut milk." },
-      { name: "Fish Tacos", ingredients: ["Fish", "Tortillas", "Lime", "Cabbage"], description: "Crispy fish tacos with a tangy lime cabbage slaw." },
+      { name: "Tomato Pasta", ingredients: ["Tomato", "Pasta", "Olive Oil"], description: "A simple yet delicious pasta dish using fresh tomatoes and olive oil.", instructions: "Boil pasta until al dente. In a separate pan, heat olive oil and add chopped tomatoes. Combine pasta with sauce and serve." },
+      { name: "Chicken Salad", ingredients: ["Chicken", "Lettuce", "Tomato", "Cucumber"], description: "A refreshing salad with grilled chicken and fresh vegetables.", instructions: "Grill chicken until cooked. Chop vegetables and mix with chicken. Serve with dressing of your choice." },
+      { name: "Omelette", ingredients: ["Egg", "Milk", "Cheese"], description: "A fluffy omelette made with eggs, milk, and your choice of cheese.", instructions: "Whisk eggs with milk, pour into a heated pan, add cheese, and fold omelette before serving." },
+      { name: "Beef Stew", ingredients: ["Beef", "Potato", "Carrot", "Onion"], description: "A hearty stew perfect for cold days, featuring tender beef and root vegetables.", instructions: "Brown beef, add chopped vegetables and broth, and simmer until tender." },
+      { name: "Vegetable Curry", ingredients: ["Potato", "Carrot", "Peas", "Coconut Milk"], description: "A rich and creamy curry made with vegetables and coconut milk.", instructions: "Cook vegetables until tender, add spices and coconut milk, simmer until flavorful." },
+      { name: "Fish Tacos", ingredients: ["Fish", "Tortillas", "Lime", "Cabbage"], description: "Crispy fish tacos with a tangy lime cabbage slaw.", instructions: "Fry fish until crispy, serve on tortillas with slaw and a squeeze of lime." },
     ];
 
     // Filter recipes based on input ingredients
@@ -68,6 +68,7 @@ const Index = () => {
                       ))}
                     </Text>
                     <Text fontStyle="italic">{recipe.description}</Text>
+                    <Text mt={2}>Instructions: {recipe.instructions}</Text>
                   </ListItem>
                 );
               })}
